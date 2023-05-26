@@ -1,0 +1,50 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_native_1 = require("react-native");
+const { width } = react_native_1.Dimensions.get('window');
+const SCREEN_WIDTH = width;
+exports.default = react_native_1.StyleSheet.create({
+    container: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        // borderWidth:1,
+    },
+    mainBox: {},
+    basicContainer: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    },
+    modalContainer: {
+        width: SCREEN_WIDTH,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 0,
+    },
+    buttonView: {
+        width: SCREEN_WIDTH,
+        padding: 8,
+        borderTopWidth: 0.5,
+        borderTopColor: 'lightgrey',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+    },
+    bottomPicker: {
+        width: SCREEN_WIDTH,
+    },
+    flag: {
+        height: 20,
+        width: 30,
+        borderRadius: 2,
+        borderWidth: 0.5,
+        borderColor: '#cecece',
+        backgroundColor: '#cecece',
+    },
+    text: {
+        height: 20,
+        padding: 0,
+        justifyContent: 'center',
+    },
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc3JjL3N0eWxlcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLCtDQUFzRDtBQUV0RCxNQUFNLEVBQUUsS0FBSyxFQUFFLEdBQUcseUJBQVUsQ0FBQyxHQUFHLENBQUMsUUFBUSxDQUFDLENBQUM7QUFFM0MsTUFBTSxZQUFZLEdBQUcsS0FBSyxDQUFDO0FBRTNCLGtCQUFlLHlCQUFVLENBQUMsTUFBTSxDQUFDO0lBQzdCLFNBQVMsRUFBRTtRQUNQLGFBQWEsRUFBRSxLQUFLO1FBQ3BCLFVBQVUsRUFBRSxRQUFRO1FBQ3BCLGNBQWMsRUFBRSxRQUFRO1FBQzVCLGlCQUFpQjtLQUNoQjtJQUNELE9BQU8sRUFBRSxFQUVSO0lBQ0QsY0FBYyxFQUFFO1FBQ1osSUFBSSxFQUFFLENBQUM7UUFDUCxjQUFjLEVBQUUsVUFBVTtRQUMxQixVQUFVLEVBQUUsUUFBUTtLQUN2QjtJQUNELGNBQWMsRUFBRTtRQUNaLEtBQUssRUFBRSxZQUFZO1FBQ25CLGNBQWMsRUFBRSxRQUFRO1FBQ3hCLFVBQVUsRUFBRSxRQUFRO1FBQ3BCLE9BQU8sRUFBRSxDQUFDO0tBQ2I7SUFDRCxVQUFVLEVBQUU7UUFDUixLQUFLLEVBQUUsWUFBWTtRQUNuQixPQUFPLEVBQUUsQ0FBQztRQUNWLGNBQWMsRUFBRSxHQUFHO1FBQ25CLGNBQWMsRUFBRSxXQUFXO1FBQzNCLGNBQWMsRUFBRSxlQUFlO1FBQy9CLGFBQWEsRUFBRSxLQUFLO0tBQ3ZCO0lBQ0QsWUFBWSxFQUFFO1FBQ1YsS0FBSyxFQUFFLFlBQVk7S0FDdEI7SUFDRCxJQUFJLEVBQUU7UUFDRixNQUFNLEVBQUUsRUFBRTtRQUNWLEtBQUssRUFBRSxFQUFFO1FBQ1QsWUFBWSxFQUFFLENBQUM7UUFDZixXQUFXLEVBQUUsR0FBRztRQUNoQixXQUFXLEVBQUUsU0FBUztRQUN0QixlQUFlLEVBQUUsU0FBUztLQUM3QjtJQUNELElBQUksRUFBRTtRQUNGLE1BQU0sRUFBRSxFQUFFO1FBQ1YsT0FBTyxFQUFFLENBQUM7UUFDVixjQUFjLEVBQUUsUUFBUTtLQUMzQjtDQUNKLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFN0eWxlU2hlZXQsIERpbWVuc2lvbnMgfSBmcm9tICdyZWFjdC1uYXRpdmUnO1xuXG5jb25zdCB7IHdpZHRoIH0gPSBEaW1lbnNpb25zLmdldCgnd2luZG93Jyk7XG5cbmNvbnN0IFNDUkVFTl9XSURUSCA9IHdpZHRoO1xuXG5leHBvcnQgZGVmYXVsdCBTdHlsZVNoZWV0LmNyZWF0ZSh7XG4gICAgY29udGFpbmVyOiB7XG4gICAgICAgIGZsZXhEaXJlY3Rpb246ICdyb3cnLFxuICAgICAgICBhbGlnbkl0ZW1zOiAnY2VudGVyJyxcbiAgICAgICAganVzdGlmeUNvbnRlbnQ6ICdjZW50ZXInLFxuICAgIC8vIGJvcmRlcldpZHRoOjEsXG4gICAgfSxcbiAgICBtYWluQm94OiB7XG5cbiAgICB9LFxuICAgIGJhc2ljQ29udGFpbmVyOiB7XG4gICAgICAgIGZsZXg6IDEsXG4gICAgICAgIGp1c3RpZnlDb250ZW50OiAnZmxleC1lbmQnLFxuICAgICAgICBhbGlnbkl0ZW1zOiAnY2VudGVyJyxcbiAgICB9LFxuICAgIG1vZGFsQ29udGFpbmVyOiB7XG4gICAgICAgIHdpZHRoOiBTQ1JFRU5fV0lEVEgsXG4gICAgICAgIGp1c3RpZnlDb250ZW50OiAnY2VudGVyJyxcbiAgICAgICAgYWxpZ25JdGVtczogJ2NlbnRlcicsXG4gICAgICAgIHBhZGRpbmc6IDAsXG4gICAgfSxcbiAgICBidXR0b25WaWV3OiB7XG4gICAgICAgIHdpZHRoOiBTQ1JFRU5fV0lEVEgsXG4gICAgICAgIHBhZGRpbmc6IDgsXG4gICAgICAgIGJvcmRlclRvcFdpZHRoOiAwLjUsXG4gICAgICAgIGJvcmRlclRvcENvbG9yOiAnbGlnaHRncmV5JyxcbiAgICAgICAganVzdGlmeUNvbnRlbnQ6ICdzcGFjZS1iZXR3ZWVuJyxcbiAgICAgICAgZmxleERpcmVjdGlvbjogJ3JvdycsXG4gICAgfSxcbiAgICBib3R0b21QaWNrZXI6IHtcbiAgICAgICAgd2lkdGg6IFNDUkVFTl9XSURUSCxcbiAgICB9LFxuICAgIGZsYWc6IHtcbiAgICAgICAgaGVpZ2h0OiAyMCxcbiAgICAgICAgd2lkdGg6IDMwLFxuICAgICAgICBib3JkZXJSYWRpdXM6IDIsXG4gICAgICAgIGJvcmRlcldpZHRoOiAwLjUsXG4gICAgICAgIGJvcmRlckNvbG9yOiAnI2NlY2VjZScsXG4gICAgICAgIGJhY2tncm91bmRDb2xvcjogJyNjZWNlY2UnLFxuICAgIH0sXG4gICAgdGV4dDoge1xuICAgICAgICBoZWlnaHQ6IDIwLFxuICAgICAgICBwYWRkaW5nOiAwLFxuICAgICAgICBqdXN0aWZ5Q29udGVudDogJ2NlbnRlcicsXG4gICAgfSxcbn0pO1xuIl19

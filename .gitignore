@@ -43,5 +43,4 @@ jspm_packages
 # MacOS files
 .DS_Store
 
-# Output
-dist/
+package-lock.json

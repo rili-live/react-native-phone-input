@@ -8,8 +8,7 @@
     "lint-fix": "./node_modules/.bin/eslint --ext .js,.jsx,.ts,.tsx --fix ./",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx,.ts,.tsx ./",
     "test": "./node_modules/.bin/mocha -r ./node_modules/ts-node/register -r tsconfig-paths/register --config .mocharc.js ./tests/**/*.test.ts --exit",
-    "test-coverage": "./node_modules/.bin/nyc --config ./nyc.config.js npm run test",
-    "prepare": "npm run build"
+    "test-coverage": "./node_modules/.bin/nyc --config ./nyc.config.js npm run test"
   },
   "repository": {
     "type": "git",
