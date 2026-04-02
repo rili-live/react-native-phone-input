@@ -11,8 +11,6 @@ import { ReactNativeCountryPickerProps, ReactNativeCountryPickerState } from './
 const PickerItem = Picker.Item;
 
 export default class CountryPicker extends Component<ReactNativeCountryPickerProps, ReactNativeCountryPickerState> {
-    private picker: any;
-
     constructor(props) {
         super(props);
 
@@ -66,7 +64,7 @@ export default class CountryPicker extends Component<ReactNativeCountryPickerPro
     }
 
     // eslint-disable-next-line class-methods-use-this
-    renderItem(country, index) {
+    renderItem(country) {
         return <PickerItem key={country.iso2} value={country.iso2} label={country.name} />;
     }
 
@@ -105,16 +103,13 @@ export default class CountryPicker extends Component<ReactNativeCountryPickerPro
 
                         <View style={styles.mainBox}>
                             <Picker
-                                ref={(ref) => {
-                                    this.picker = ref;
-                                }}
                                 style={styles.bottomPicker}
                                 selectedValue={this.state.selectedCountry}
                                 onValueChange={(country) => this.onValueChange(country)}
                                 itemStyle={itemStyle}
                                 mode="dialog"
                             >
-                                {Country.getAll().map((country, index) => this.renderItem(country, index))}
+                                {Country.getAll().map((country) => this.renderItem(country))}
                             </Picker>
                         </View>
                     </View>

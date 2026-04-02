@@ -23,12 +23,12 @@ import PhoneInput from 'react-native-phone-input'
 
 render(){
     return(
-        <PhoneInput ref='phone'/>
+        <PhoneInput ref={(ref) => { this.phone = ref; }}/>
     )
 }
 ```
 
-[see full basic example](https://github.com/thegamenicorus/react-native-phone-input/blob/master/examples/BasicExample/app.js)
+[see full basic example](https://github.com/rili-live/react-native-phone-input/blob/master/examples/BasicExample/app.js)
 
 ## Using a Custom Country Picker
 (android/ios)
@@ -82,7 +82,7 @@ render(){
 }
 ```
 
-[see full custom picker example](https://github.com/thegamenicorus/react-native-phone-input/blob/master/examples/CustomPicker/app.js)
+[see full custom picker example](https://github.com/rili-live/react-native-phone-input/blob/master/examples/CustomPicker/app.js)
 
 ## Using a Custom (External) Library Picker
 
@@ -143,7 +143,7 @@ render(){
 }
 ```
 
-[see full custom library picker example](https://github.com/thegamenicorus/react-native-phone-input/blob/master/examples/CustomLibraryPicker/app.js)
+[see full custom library picker example](https://github.com/rili-live/react-native-phone-input/blob/master/examples/CustomLibraryPicker/app.js)
 
 ## Custom Flag component 
 
@@ -207,16 +207,14 @@ If you need to change how the flag is rendered, you can use the `renderFlag` pro
 | Function Name   | Return Type | Parameters  | Description                                       |
 | --------------- | ----------- | ----------- | ------------------------------------------------- |
 | isValidNumber   | boolean     | none        | return true if current phone number is valid      |
-| getNumberType   | string      | none        | return true type of current phone number          |
+| getNumberType   | string      | none        | return type of current phone number               |
 | getValue        | string      | none        | return current phone number (unformatted)         |
-| getFlag         | object      | iso2:string | return flag image                                 |
-| getAllCountries | object      | none        | return country object in country picker           |
-| getPickerData   | object      | nont        | return country object with flag image             |
+| getFlag         | image       | iso2:string | return flag image                                 |
+| getAllCountries  | array       | none        | return array of all country objects                |
+| getPickerData   | array       | none        | return array of country objects with flag images   |
 | focus           | void        | none        | focus the phone input                             |
 | blur            | void        | none        | blur the phone input                              |
 | selectCountry   | void        | iso2:string | set phone input to specific country               |
 | setValue        | void        | string      | set phone input value                             |
 | getCountryCode  | string      | none        | return country dial code of current phone number  |
 | getISOCode      | string      | none        | return country iso code of current phone number   |
-| onPressCancel   | func        | none        | handler to be called when taps the cancel button  |
-| onPressConfirm  | func        | none        | handler to be called when taps the confirm button |

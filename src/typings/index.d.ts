@@ -1,8 +1,5 @@
-// Type definitions for react-native-phone-input 0.2
-// Project: https://github.com/thegamenicorus/react-native-phone-input
-// Definitions by: Matthew Elphick <https://github.com/maael>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.9
+// Type definitions for react-native-phone-input
+// Project: https://github.com/rili-live/react-native-phone-input
 
 import * as React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import {
@@ -161,7 +158,7 @@ export interface ReactNativePhoneInputProps<TextComponentType extends React.Comp
     /**
      * Render function to replace the default flag
      */
-    renderFlag?: ({ imageSource }: { imageSource: number }) => Element | JSX.Element;
+    renderFlag?: ({ imageSource }: { imageSource: ImageRequireSource }) => React.ReactElement;
 }
 
 export default class ReactNativePhoneInput<

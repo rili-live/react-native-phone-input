@@ -1,9 +1,8 @@
-import _ from 'lodash';
+import { first, findKey } from 'lodash';
 import libPhoneNumber from 'google-libphonenumber';
 
 import Country from './country';
-import countries from './resources/countries.json'; // eslint-disable-line @typescript-eslint/no-unused-vars
-import numberType from './resources/numberType.json'; // eslint-disable-line @typescript-eslint/no-unused-vars
+import numberType from './resources/numberType.json';
 
 const phoneUtil = libPhoneNumber.PhoneNumberUtil.getInstance();
 const asYouTypeFormatter = libPhoneNumber.AsYouTypeFormatter;
@@ -58,7 +57,7 @@ class PhoneNumber {
 
         // countryCode[0] can be null -> get first element that is not null
         if (countryCode) {
-            return _.first(countryCode.filter((iso2: any) => iso2));
+            return first(countryCode.filter((iso2: any) => iso2));
         }
 
         return '';
@@ -103,7 +102,7 @@ class PhoneNumber {
     getNumberType(number, iso2) {
         const phoneInfo = this.parse(number, iso2);
         const typeIndex = phoneInfo ? phoneUtil.getNumberType(phoneInfo) : -1;
-        return _.findKey(numberType, (noType) => noType === typeIndex);
+        return findKey(numberType, (noType) => noType === typeIndex);
     }
 
     // eslint-disable-next-line class-methods-use-this
