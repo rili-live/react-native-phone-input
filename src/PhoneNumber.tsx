@@ -29,7 +29,7 @@ class PhoneNumber {
                     // if (this.countryCodes[numericChars]) {
                     if (Country.getCountryCodes()[numericChars]) {
                         // store the actual raw string (useful for matching later)
-                        dialCode = number.substr(0, i + 1);
+                        dialCode = number.substring(0, i + 1);
                     }
                     // longest dial code is 4 chars
                     if (numericChars.length === 4) {
@@ -69,7 +69,6 @@ class PhoneNumber {
         try {
             return phoneUtil.parse(number, iso2);
         } catch (err: any) {
-            console.log(`Exception was thrown: ${err.toString()}`);
             return null;
         }
     }

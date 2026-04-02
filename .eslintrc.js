@@ -40,4 +40,12 @@ module.exports = {
             }
         ],
     },
+    overrides: [
+        {
+            files: ['tests/**/*.ts'],
+            rules: {
+                'no-unused-expressions': 'off',
+            },
+        },
+    ],
 };

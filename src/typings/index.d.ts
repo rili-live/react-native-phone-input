@@ -36,7 +36,7 @@ export interface PickerData {
 export interface ReactNativeCountryPickerProps {
     buttonColor?: string;
     cancelText?: string;
-    cancelTextStyle: TextStyle;
+    cancelTextStyle?: TextStyle;
     confirmText?: string;
     confirmTextStyle?: TextStyle;
     selectedCountry?: any;
@@ -192,12 +192,12 @@ export default class ReactNativePhoneInput<
     /**
     * Return country object in country picker
     */
-    getAllCountries: () => CountriesListItem;
+    getAllCountries: () => CountriesListItem[];
 
     /**
     * Return country object with flag image
     */
-    getPickerData: () => PickerData;
+    getPickerData: () => PickerData[];
 
     /**
     * Focus the phone input

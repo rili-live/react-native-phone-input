@@ -27,7 +27,7 @@ export default class PhoneInput<TextComponentType extends React.ComponentType = 
         } = this.props;
 
         const {
-            countriesList, disabled
+            countriesList,
         } = this.props;
 
         if (countriesList) {
@@ -50,18 +50,10 @@ export default class PhoneInput<TextComponentType extends React.ComponentType = 
         }
 
         this.state = {
-            disabled,
             iso2: initialCountry,
             displayValue,
             value: initialValue,
         };
-    }
-
-    componentDidUpdate() {
-        const { disabled } = this.props;
-        if (disabled !== this.state.disabled) {
-            this.setState({ disabled }); // eslint-disable-line react/no-did-update-set-state
-        }
     }
 
     onChangePhoneNumber = (number) => {
@@ -176,7 +168,7 @@ export default class PhoneInput<TextComponentType extends React.ComponentType = 
         let countryDialCode;
         if (iso2) {
             const countryData = PhoneNumber.getCountryDataByCode(iso2);
-            countryDialCode = countryData.dialCode;
+            countryDialCode = countryData ? countryData.dialCode : undefined;
         }
 
         let displayValue;
@@ -201,7 +193,7 @@ export default class PhoneInput<TextComponentType extends React.ComponentType = 
     possiblyEliminateZeroAfterCountryCode(number) {
         const dialCode = PhoneNumber.getDialCode(number);
         return number.startsWith(`${dialCode}0`)
-            ? dialCode + number.substr(dialCode.length + 1)
+            ? dialCode + number.substring(dialCode.length + 1)
             : number;
     }
 
@@ -218,7 +210,8 @@ export default class PhoneInput<TextComponentType extends React.ComponentType = 
     }
 
     render() {
-        const { iso2, displayValue, disabled } = this.state;
+        const { iso2, displayValue } = this.state;
+        const { disabled } = this.props;
         const country = this.getAllCountries().find((c) => c.iso2 === iso2);
         const TextComponent: any = this.props.textComponent || TextInput;
         return (

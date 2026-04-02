@@ -79,7 +79,7 @@ export default class CountryPicker extends Component<ReactNativeCountryPickerPro
                 transparent
                 visible={this.state.modalVisible}
                 onRequestClose={() => {
-                    console.log('Country picker has been closed.');
+                    this.onPressCancel();
                 }}
             >
                 <View style={styles.basicContainer}>

@@ -22,7 +22,7 @@ class Country {
             this.countryCodes[dialCode] = [];
         }
 
-        const index = priority || 0;
+        const index = priority ?? 0;
         this.countryCodes[dialCode][index] = iso2;
     }
 
