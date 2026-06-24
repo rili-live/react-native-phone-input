@@ -16,6 +16,20 @@ Demo of Phone Input box for React Native (android/ios)
 npm i react-native-phone-input --save
 ```
 
+## Required external library
+
+You need to add any external library to show the list of countries.
+
+You can checkout below libraries that works with this package, or else you will face <strong style="color: #ff7c7c;"> requiredNativeComponent: RNCPicker was not foud in the uimanager</strong>.
+```
+npm i @react-native-picker/picker 
+```
+or 
+```
+npm i react-native-country-picker-modal
+```
+
+
 ## Basic Usage
 
 ```jsx
